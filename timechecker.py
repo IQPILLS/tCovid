@@ -14,15 +14,15 @@ while True:
         soup = bs(r.content, "html5lib")
         data = json.loads(soup.find("cv-stats-virus")[":charts-data"])
         data_today = data[0]
-        data_tomorrow = data[1]
-        if data_today['sick'] > data_tomorrow['sick']:
-            sick_difference = data_today['sick'] - data_tomorrow['sick']
+        data_yesterday = data[1]
+        if data_today['sick'] > data_yesterday['sick']:
+            sick_difference = data_today['sick'] - data_yesterday['sick']
             emoji_sick = '📈'
-        elif data_today['sick'] == data_tomorrow['sick']:
+        elif data_today['sick'] == data_yesterday['sick']:
             sick_difference = '+0'
             emoji_sick = '❌'
-        healed_difference = data_today['healed'] - data_tomorrow['healed']
-        died_difference = data_today['died'] - data_tomorrow['died']
+        healed_difference = data_today['healed'] - data_yesterday['healed']
+        died_difference = data_today['died'] - data_yesterday['died']
         date_today = data_today['date']
         sick_today = data_today['sick']
         healed_today = data_today['healed']
