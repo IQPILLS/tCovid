@@ -2,4 +2,3 @@ html5lib
 aiogram
 requests
 beautifulsoup4
-datetime

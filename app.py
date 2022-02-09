@@ -31,7 +31,7 @@ async def send_welcome(message: types.Message):
             file = open("users.txt", 'a')
             file.write(str(user_id) + '\n')
             file.close()
-            await bot.send_message('your id', f"Новый пользователь: {user_id}")
+            await bot.send_message('229629831', f"Новый пользователь: {user_id}")
 
 
 @dp.message_handler(commands=['help'])
@@ -56,7 +56,7 @@ async def stat(message: types.Message):
             file = open("users.txt", 'a')
             file.write(str(user_id) + '\n')
             file.close()
-            await bot.send_message('your id', f"Новый пользователь: {user_id}")
+            await bot.send_message('229629831', f"Новый пользователь: {user_id}")
 
 
 @dp.message_handler(commands=['today'])
@@ -75,8 +75,21 @@ async def today(message: types.Message):
             file = open("users.txt", 'a')
             file.write(str(user_id) + '\n')
             file.close()
-            await bot.send_message('your id', f"Новый пользователь: {user_id}")
+            await bot.send_message('229629831', f"Новый пользователь: {user_id}")
 
+
+@dp.message_handler(commands=['vaccine'])
+async def vaccine(message: types.Message):
+    import timechecker
+    f = open('vaccine.txt', 'r', encoding="utf-8")
+    vaccine_output = f.read()
+    f.close()
+    await message.answer(vaccine_output, parse_mode='Markdown')
+
+
+@dp.message_handler(commands=['virus'])
+async def virus(messages: types.Message):
+    await bot.send_photo(chat_id=messages.chat.id, photo='https://i.imgur.com/oz7GCqF.png')
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
