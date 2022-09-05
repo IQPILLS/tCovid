@@ -7,7 +7,7 @@ from mongo import get_database
 A tool for obtaining statistics on new cases of COVID-19
 
 email: iliasovanton@yandex.ru
-Source code: https://github.com/Vewaa
+Source code: https://github.com/IQPILLS
 
 Released under GNU General Public License v3.0
 """
