@@ -5,8 +5,8 @@ from aiogram import Bot, Dispatcher, executor, types
 """
 A tool for obtaining statistics on new cases of COVID-19
 
-email: vewaa@vk.com
-Source code: https://github.com/Vewaa
+email: iliasovanton@yandex.ru
+Source code: https://github.com/IQPILLS
 
 Released under GNU General Public License v3.0
 """
