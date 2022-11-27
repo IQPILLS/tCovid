@@ -31,7 +31,7 @@ async def send_welcome(message: types.Message):
             file = open("users.txt", 'a')
             file.write(str(user_id) + '\n')
             file.close()
-            await bot.send_message('229629831', f"Новый пользователь: {user_id}")
+            #await bot.send_message('229629831', f"Новый пользователь: {user_id}")
 
 
 @dp.message_handler(commands=['help'])
@@ -56,7 +56,7 @@ async def stat(message: types.Message):
             file = open("users.txt", 'a')
             file.write(str(user_id) + '\n')
             file.close()
-            await bot.send_message('229629831', f"Новый пользователь: {user_id}")
+            #await bot.send_message('229629831', f"Новый пользователь: {user_id}")
 
 
 @dp.message_handler(commands=['today'])
@@ -75,7 +75,7 @@ async def today(message: types.Message):
             file = open("users.txt", 'a')
             file.write(str(user_id) + '\n')
             file.close()
-            await bot.send_message('229629831', f"Новый пользователь: {user_id}")
+            #await bot.send_message('229629831', f"Новый пользователь: {user_id}")
 
 
 @dp.message_handler(commands=['vaccine'])
